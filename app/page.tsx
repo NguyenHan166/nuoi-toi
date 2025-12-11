@@ -327,7 +327,7 @@ export default function NuoiToiPage() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
             <button
               onClick={() => scrollToSection("packages")}
               className="px-8 py-4 bg-gradient-to-r from-primary to-accent text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all"
@@ -664,6 +664,35 @@ export default function NuoiToiPage() {
           </div>
         </div>
       </footer>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fadeIn">
+          <div className="bg-card rounded-3xl shadow-2xl max-w-md w-full p-8 relative animate-scaleIn">
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 w-8 h-8 bg-muted rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+            >
+              <X className="w-4 h-4" />
+            </button>
+            <div className="text-center">
+              <div className="text-6xl mb-4 animate-bounce">📜</div>
+              <h3 className="text-2xl font-bold mb-4">Tuyên Ngôn Lười Biếng</h3>
+              <div className="text-muted-foreground space-y-2 mb-6 text-left">
+                <p>1. Tôi không lười, tôi chỉ đang ở chế độ tiết kiệm năng lượng.</p>
+                <p>2. Việc hôm nay chớ để ngày mai, hãy để... ngày kia.</p>
+                <p>3. Ngủ là một bộ môn nghệ thuật và tôi là nghệ sĩ.</p>
+                <p>4. Nếu không có gì làm, thì đừng làm gì cả.</p>
+              </div>
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="w-full py-3 bg-gradient-to-r from-primary to-accent text-white font-bold rounded-full hover:shadow-lg transition-all"
+              >
+                Đã thông suốt! 😴
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {showConfirmPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fadeIn">
