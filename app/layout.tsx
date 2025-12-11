@@ -8,7 +8,7 @@ const _quicksand = Quicksand({ subsets: ["latin", "vietnamese"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Nuôi Tôi - Website Parody Hài Hước",
+  title: "Nuôi Tôi - Website Parody Hài",
   description:
     "Hãy nuôi tôi để tôi khỏi phải lớn! Website parody vui nhộn về người trẻ được cộng đồng nuôi để sống chill.",
   generator: "v0.app",
