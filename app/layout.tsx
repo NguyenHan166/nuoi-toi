@@ -13,21 +13,9 @@ export const metadata: Metadata = {
     "Hãy nuôi tôi để tôi khỏi phải lớn! Website parody vui nhộn về người trẻ được cộng đồng nuôi để sống chill.",
   generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/profile.jpg",
+    shortcut: "/profile.jpg",
+    apple: "/profile.jpg",
   },
 }
 
